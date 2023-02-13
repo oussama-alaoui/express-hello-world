@@ -1,0 +1,14 @@
+GET http://localhost:3000/users
+auth-token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmI4NTM3ZDU1NmUyYzE4ZWFhNjQxNyIsImlhdCI6MTY2Nzk5MDgzOSwiZXhwIjoxNjY4MDc3MjM5fQ.f0HbJSNmHZLeHqGkr1qnnZ99hqyjJdc4b1BL69mkPX4
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+
+{
+  "name": "John Doe",
+  "email": "sssass@gmaili.com",
+    "password": "123456",
+    "country": "India"
+}

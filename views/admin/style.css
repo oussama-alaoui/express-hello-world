@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* * {
+    margin: 0;
+    padding: 0;
+  } */
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background-color: #eeeeee;
+}
+.container {
+  margin-top: 50px;
+  background-color: #d9d9d9;
+  width: 100%;
+  min-height: 100%;
+}
+
+.sidebar-btn {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.sidebar-btn div {
+  background-color: black;
+  width: 30px;
+  height: 3px;
+  margin-top: 5px;
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #afafaf;
+  height: 100%;
+  width: 200px;
+}
+
+.list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.list a {
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: black;
+}
+
+.line {
+  background-color: black;
+  height: 1px;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.513);
+}
+
+.hidden {
+  display: none;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  margin-top: 10px;
+  width: 170px;
+  height: 100px;
+  margin-right: 10px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.box1 h1,
+.box2 h1,
+.box3 h1,
+.box4 h1,
+.box5 h1,
+.box6 h1 {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+.box1 p,
+.box2 p,
+.box3 p,
+.box4 p,
+.box5 p,
+.box6 p {
+  margin-top: 15px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+.admin-mover {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.admin {
+  margin-top: 50px;
+  width: 350px;
+  height: 120px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+.name {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.name button {
+  background-color: antiquewhite;
+  width: 200px;
+}
+.settings-btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.settings-btns a {
+  margin-right: 10px;
+}
+
+.settings-btns a button {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+}
+/* 
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+
+
+
+                NEW PAGE
+
+
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  */
+
+.head {
+  /* padding-top: 90px; */
+  text-align: center;
+}
+.head h1 {
+  margin-top: 40px;
+}
+
+/* 
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+
+
+
+                RECHARGE LOG
+
+
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  */
+
+.log-place {
+  padding-top: 250px;
+  padding-bottom: 20px;
+}
+.log {
+  margin-top: 30px;
+  width: 350px;
+  height: 100px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  /* margin-top: 400px; */
+}
+.log p {
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+.date {
+  margin-right: 210px;
+  padding-top: 8px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 450px) {
+  /* * {
+    margin: 0;
+    padding: 0;
+  } */
+  body {
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #eeeeee;
+  }
+  .container {
+    margin-top: 50px;
+    background-color: #d9d9d9;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .sidebar-btn {
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+  .sidebar-btn div {
+    background-color: black;
+    width: 30px;
+    height: 3px;
+    margin-top: 5px;
+  }
+
+  .sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #afafaf;
+    height: 100%;
+    width: 200px;
+  }
+
+  .list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  .list a {
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  .line {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.513);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .boxes {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    padding-bottom: 20px;
+  }
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6 {
+    margin-top: 10px;
+    width: 170px;
+    height: 100px;
+    margin-right: 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+  }
+
+  .box1 h1,
+  .box2 h1,
+  .box3 h1,
+  .box4 h1,
+  .box5 h1,
+  .box6 h1 {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  .box1 p,
+  .box2 p,
+  .box3 p,
+  .box4 p,
+  .box5 p,
+  .box6 p {
+    margin-top: 15px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  .admin-mover {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .admin {
+    margin-top: 50px;
+    width: 350px;
+    height: 120px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+  }
+  .name {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .name button {
+    background-color: antiquewhite;
+    width: 200px;
+  }
+  .settings-btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .settings-btns a {
+    margin-right: 10px;
+  }
+
+  .settings-btns a button {
+    background-color: #d9d9d9;
+    border-radius: 5px;
+  }
+
+  button {
+    border: none;
+  }
+  /* 
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+
+
+
+                NEW PAGE
+
+
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  */
+
+  .head {
+    /* padding-top: 90px; */
+    text-align: center;
+  }
+  .head h1 {
+    margin-top: 40px;
+  }
+
+  /* 
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+
+
+
+                RECHARGE LOG
+
+
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  ///////////////////////////////////////////
+  */
+
+  .log-place {
+    padding-top: 250px;
+    padding-bottom: 20px;
+  }
+  .log {
+    margin-top: 30px;
+    width: 350px;
+    height: 100px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    /* margin-top: 400px; */
+  }
+  .log p {
+    margin-right: 10px;
+    padding-top: 10px;
+  }
+
+  .date {
+    margin-right: 210px;
+    padding-top: 8px;
+    font-size: 0.8rem;
+  }
+}

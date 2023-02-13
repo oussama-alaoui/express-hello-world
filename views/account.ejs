@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>حسابي</title>
+  </head>
+</html>
+
+<body>
+  <%- include('partials/nav_without_search');%>
+  <div class="content">
+    <div class="profile">
+      <div class="photo"></div>
+      <div class="user-title">
+        <h5><%= user.username %></h5>
+        <!-- role with arabic -->
+        <% if (user.role == "user") { %>
+          <a href="/account/subscription" style="color: #f27474">مستخدم</a>
+        <% } else if (user.role == "seller") { %>
+          <a href="/account/subscription" style="color: #f27474">بائع</a>
+        <% } else if (user.role == "professional seller") { %>
+          <a href="/account/subscription" style="color: #f27474">بائع محترف</a>
+        <% } else if (user.role == "smart seller") { %>
+          <a href="/account/subscription" style="color: #f27474">بائع ذكي</a>
+        <% } %>
+      </div>
+    </div>
+    <div class="table-s">
+      <div class="line"></div>
+      <a href="/account/payment">إعدادات الدفع</a>
+      <div class="line"></div>
+      <a href="/account/identification">إعدادات الهوية</a>
+      <div class="line"></div>
+      <a href="/account/address">إعدادات العنوان</a>
+      <div class="line"></div>
+      <!-- <a href="#">إعدادات اللغة</a>
+      <div class="line"></div> -->
+      <a href="/logout">تسجيل الخروج</a>
+      <div class="line"></div>
+    </div>
+
+    <!--  -->
+  </div>
+
+  <div class="modal-support hidden">
+    <div class="header">
+      <img
+        src="/img/icons/close.svg"
+        class="close p-2"
+        style="width: 35px"
+        alt=""
+      />
+      <h1 class="flex-grow-1">الدعم الفني</h1>
+    </div>
+
+    <div class="socials">
+      <a href="https://wa.me/96891919506">
+        <img src="/img/icons/whatsapp.svg" style="width: 50px" alt="socials" />
+      </a>
+
+      <a href="https://www.facebook.com/107891381518097">
+        <img src="/img/icons/facebook.svg" style="width: 50px" alt="socials" />
+      </a>
+
+      <a href="https://instagram.com/recycling_in_oman?igshid=MTg0ZDhmNDA=">
+        <img src="/img/icons/instagram.svg" style="width: 45px" alt="socials" />
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const navMenu = document.querySelector(".nav__menu");
+
+    window.addEventListener("scroll", function () {
+      navMenu.classList.toggle("scrolling");
+      console.log("scrolled");
+    });
+
+    const modalBtnSupport = document.querySelector(".sos-btn");
+
+    const modalS = document.querySelector(".modal-support");
+
+    const closeBtn = document.querySelector(".close");
+
+    modalBtnSupport.addEventListener("click", function () {
+      modalS.classList.toggle("hidden");
+    });
+
+    window.addEventListener("scroll", function () {
+      modalS.classList.add("hidden");
+      // modalN.classList.add("hidden");
+      // console.log("scrolled");
+    });
+
+    closeBtn.addEventListener("click", function () {
+      modalS.classList.add("hidden");
+    });
+  </script>
+  <!-- <h1>account page</h1> -->
+</body>

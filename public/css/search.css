@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #dde4e7;
+
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  height: 100%;
+  /* width: 100%; */
+}
+
+a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.search-container {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.h-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 20px; */
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 10vh;
+}
+.splace {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  margin-top: 0.5rem;
+  /* margin-right: 0.7rem; */
+  width: 360px;
+  border-radius: 7px;
+  height: 39px;
+  /* background-color: black; */
+}
+/* .search-container .splace {
+  height: 20vh;
+} */
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #888686;
+  /* margin-bottom: 10px; */
+}
+
+/* .bell-btn {
+  margin-bottom: 20px;
+} */
+
+.categories-div {
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 20px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 73vh;
+  /* text-align: center; */
+}
+
+.choices-1 {
+  width: 50%;
+  height: 100%;
+  border: 0.5px solid #888686;
+  /* background-color: #888686; */
+}
+.choices-1 input[type="radio"] {
+  display: none;
+}
+.choices-2 {
+  width: 50%;
+  height: 100%;
+  border: 0.5px solid #888686;
+  overflow-y: auto;
+}
+
+.choice div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.filter-btn {
+  background-color: #5ab1c6;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  width: 250px;
+  padding-top: 10px;
+  height: 5vh;
+}
+.hidden {
+  display: none;
+}
+
+.currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+.currency h1 {
+  /* background-color: #888686; */
+  border: 1px solid #888686;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  width: 200px;
+  padding-top: 5px;
+}
+/* .sec--1 .containerr {
+  display: flex; 
+   justify-content: center; 
+   align-items: center;
+} */
+.currency .containerr .price {
+  border: 1px solid #888686;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  /* width: 200px; */
+  padding-top: 5px;
+}
+
+input[type="number"] {
+  padding-right: 5px;
+  color: #3a3a3a;
+}

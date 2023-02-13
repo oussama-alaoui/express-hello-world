@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>حسابي</title>
+  </head>
+</html>
+
+<body>
+  <nav class="nav">
+    <div class="nav__menu" id="nav-menu">
+      <a href="/">
+        <img src="/img/iconsw/home.svg" alt="" style="width: 40px" />
+        <span>الرئيسية </span>
+      </a>
+
+      <a href="/chat">
+        <img src="/img/iconsw/chat.svg" alt="" style="width: 42px" />
+        <span>الدردشة</span>
+      </a>
+
+      <a href="/newad.html">
+        <img src="/img/iconsw/camera.svg" alt="" style="width: 40px" />
+        <span>أعلان</span>
+      </a>
+
+      <a href="/myads">
+        <img src="/img/iconsw/news.svg" alt="" style="width: 40px" />
+        <span> أعلاناتي </span>
+      </a>
+
+      <a href="/account">
+        <img src="/img/iconsw/user.svg" alt="" style="width: 40px" />
+        <span>حسابي </span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="logo d-flex justify-content-around">
+    <div class="back-btn">
+      <a href="/account">
+        <img src="/img/icons/back.svg" style="width: 40px" alt="back-btn"
+      /></a>
+    </div>
+
+    <a href="/">
+      <img
+        src="/img/invare_logo-removebg-preview.png"
+        alt="logo"
+        style="width: 4rem"
+      />
+    </a>
+
+    <div class="back-btn">
+      <a href="https://wa.me/96891919506">
+        <img
+          class="sos-btn"
+          src="/img/iconsw/phone-500.svg"
+          alt="sos"
+          style="width: 30px"
+        />
+      </a>
+    </div>
+  </div>
+
+  <div class="splace">
+    <div class="search">
+      <input type="text" placeholder="البحث" class="search" />
+    </div>
+  </div>
+  <div class="content">
+    <!-- <a href="#" class="activation-btn">
+      <div>تفعيل حساب تجاري</div>
+    </a> -->
+
+    <div class="personal-account">
+      <div class="user-photo">
+        <div class="photo"></div>
+      </div>
+
+      <div class="information-place">
+        <div class="user-name"><%= user.username %></div>
+        <div class="user-id"><%= user.cin %></div>
+        <div class="user-phone"><%= user.phone %></div>
+        <div class="user-email"><%= user.email %></div>
+        <div class="user-birthdate">
+          <%= new Date(user.birthday).toLocaleDateString("en-US", {year: "numeric", month: "2-digit", day: "2-digit"}) %>
+        </div>
+      </div>
+
+      <div class="container tee">
+        <input type="file" id="file" accept="image/*" />
+        <div class="img-area" data-img="">
+          <i class="bx bxs-cloud-upload icon"></i>
+          <h3>رفع الصورة</h3>
+          <p>
+            يجب ان تكون الصورة<br />
+            اقل عن<span>2MB</span>
+          </p>
+        </div>
+        <button class="select-image">اختر الصورة</button>
+      </div>
+
+      <a href="#" class="activation-btn">
+        <div>تحديث معلومات الحساب</div>
+      </a>
+    </div>
+
+    <div class="business-account hidden">
+      <div class="user-photo">
+        <div class="photo"></div>
+      </div>
+
+      <div class="information-place">
+        <div class="cr-name">invare</div>
+        <div class="cr-number">1234567</div>
+      </div>
+
+      <a href="#" class="activation-btn">
+        <div>تحديث معلومات الحساب</div>
+      </a>
+    </div>
+
+    <!-- <div class="info-submit">
+      <input placeholder="رقم البطاقة الشخصية" type="number" />
+    </div> -->
+    <!--  -->
+  </div>
+
+  <div class="modal-support hidden">
+    <div class="header">
+      <img
+        src="/img/icons/close.svg"
+        class="close p-2"
+        style="width: 35px"
+        alt=""
+      />
+      <h1 class="flex-grow-1">معلومات الحساب</h1>
+    </div>
+
+    <div class="form">
+      <div class="form-group">
+        <form method="post" action="/account/identification">
+        <!-- <label for="name">الاسم</label> -->
+        <p class="error-message">register</p>
+        <input type="text" class="name" id="name" placeholder="الاسم" />
+        <input
+          type="number"
+          name="cin"
+          class="id-number"
+          id="id-number"
+          placeholder="رقم البطاقة الشخصية"
+        />
+        <input
+          type="number"
+          name="phone_number"
+          class="phone-number"
+          id="phone-number"
+          placeholder="رقم الهاتف"
+        />
+        <input
+          type="text"
+          name="email"
+          class="email"
+          id="email"
+          placeholder="عنوان الكتروني"
+        />
+        <input
+          type="date"
+          name="birthday"
+          class="birthdate"
+          id="birthdate"
+          placeholder="تاريخ الميلاد"
+        />
+        <input type="submit"  value="تحديث" class="submit" />
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/form.js"></script>
+
+  <!-- <h1>account page</h1> -->
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>تسجيل الدخول</title>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="#">
+        <img
+          src="/img/invare_logo-removebg-preview.png"
+          alt="logo"
+          style="width: 4rem"
+        />
+      </a>
+    </div>
+    <div class="content-l">
+      <div class="entry">
+        <% if (messages.error) { %>
+          <h6 style="display: block;color: rgb(200, 42, 34);"><%= messages.error %></h6>
+        <% } %>
+        <form action="/login" method="POST">
+          <div class="login">
+            <span>اسم المستخدم</span>
+            <input class="login-input" name="username" type="text" placeholder="اسم المستخدم" />
+          </div>
+          <div class="password">
+            <span>كلمة المرور</span>
+            <input class="password-input" name="password" type="password" placeholder="كلمة المرور" />
+          </div>
+          <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+          
+        </form>
+        <div class="lines">
+          <div class="liner"></div>
+          <span>او</span>
+          <div class="liner"></div>
+        </div>
+
+        <a href="/register">
+          <button class="signup-btn">تسجيل حساب جديد</button>
+        </a>
+      </div>
+    </div>
+    <!--  -->
+  </body>
+</html>

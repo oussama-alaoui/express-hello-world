@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/search.css" />
+
+    <title>invare</title>
+  </head>
+  <body>
+    <div class="search-container">
+      <div class="h-nav">
+        <div class="right">
+          <a href="/">
+            <img
+              class="bell-btn"
+              src="/img/icons/back.svg"
+              alt="sos"
+              style="width: 20px"
+            />
+          </a>
+          <span>فلترة</span>
+        </div>
+
+        <div class="left">
+          <a href="#">
+            <div>حذف الكل</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="splace">
+        <div class="search">
+          <input type="text" placeholder="البحث" class="search" />
+        </div>
+      </div>
+
+      <div class="categories-div">
+        <div class="choices-1">
+          <label class="choice">
+            <input
+              type="radio"
+              value="القسم"
+              name="department"
+              class="title"
+              id="sec--1"
+            />
+            القسم
+          </label>
+
+          <div class="line"></div>
+
+          <label class="choice">
+            <input
+              type="radio"
+              value="الاسم"
+              name="department"
+              class="title"
+              id="sec--2"
+            />
+            الاسم
+          </label>
+
+          <div class="line"></div>
+
+          <label class="choice">
+            <input
+              type="radio"
+              value="الحالة"
+              name="department"
+              class="title"
+              id="sec--3"
+            />
+            الحالة
+          </label>
+
+          <!-- <a href="" class="choice">
+            <div>الحالة</div>
+          </a> -->
+          <div class="line"></div>
+
+          <label class="choice">
+            <input
+              type="radio"
+              value="السعر"
+              name="department"
+              class="title"
+              id="sec--4"
+            />
+            السعر
+          </label>
+          <!-- <a href="" class="choice">
+            <div>السعر</div>
+          </a> -->
+          <div class="line"></div>
+
+          <label class="choice">
+            <input
+              type="radio"
+              value="المضافة"
+              name="department"
+              class="title"
+              id="sec--5"
+            />
+            المضافة
+          </label>
+
+          <!-- <a href="" class="choice">
+            <div>المضافة</div>
+          </a> -->
+
+          <div class="line"></div>
+
+          <label class="choice">
+            <input
+              type="radio"
+              value="الموقع"
+              name="department"
+              class="title"
+              id="sec--6"
+            />
+            الموقع
+          </label>
+          <div class="line"></div>
+        </div>
+
+        <div class="choices-2">
+          <div class="sec--1">
+            <label class="choice">
+              <input
+                type="radio"
+                value="المواد"
+                name="department"
+                class="material division"
+              />
+              المواد
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الاجهزة"
+                name="department"
+                class="electronics division"
+              />
+              الاجهزة
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="المخلفات"
+                name="department"
+                class="waste division"
+              />
+              المخلفات
+            </label>
+
+            <div class="line"></div>
+          </div>
+
+          <div class="sec--2 hidden">
+            <label class="choice">
+              <input
+                type="radio"
+                value="الاجهزة الكهربائية"
+                name="department"
+                class="result electronicspress"
+              />
+              الاجهزة الكهربائية
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الاجهزة الاكترونية"
+                name="department"
+                class="result electronicspress"
+              />
+              الاجهزة الاكترونية
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="المحركات"
+                name="department"
+                class="result electronicspress"
+              />
+              المحركات
+            </label>
+
+            <div class="line"></div>
+          </div>
+
+          <div class="sec--3 hidden">
+            <label class="choice">
+              <input
+                type="radio"
+                value="مخلفات الهدم و البناء"
+                name="department"
+                class="result wastepress"
+              />
+              مخلفات الهدم و البناء
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value=" المخلفات العضوية"
+                name="department"
+                class="result wastepress"
+              />
+              المخلفات العضوية
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="المخلفات الخضراء"
+                name="department"
+                class="result wastepress"
+              />
+              المخلفات الخضراء
+            </label>
+
+            <div class="line"></div>
+          </div>
+
+          <div class="sec--4 hidden">
+            <!-- <div class="sec--2"> -->
+            <label>
+              <input
+                type="radio"
+                value="البلاستيك"
+                name="department"
+                class="result materialr"
+              />
+              البلاستيك
+            </label>
+
+            <div class="line"></div>
+
+            <label>
+              <input
+                type="radio"
+                value="المعادن "
+                name="department"
+                class="result materialr"
+              />
+              المعادن
+            </label>
+
+            <div class="line"></div>
+
+            <label>
+              <input
+                type="radio"
+                value="الورق"
+                name="department"
+                class="result materialr"
+              />
+              الورق
+            </label>
+
+            <div class="line"></div>
+            <!-- <a href="#" class="result">المطاط</a> -->
+            <label>
+              <input
+                type="radio"
+                value="المطاط "
+                name="department"
+                class="result materialr"
+              />
+              المطاط
+            </label>
+            <div class="line"></div>
+            <!-- <a href="#" class="result">الاخشاب</a> -->
+            <label>
+              <input
+                type="radio"
+                value="الاخشاب "
+                name="department"
+                class="result materialr"
+              />
+              الاخشاب
+            </label>
+            <div class="line"></div>
+            <!-- <a href="#" class="result">الزيوت</a> -->
+            <label>
+              <input
+                type="radio"
+                value="الزيوت "
+                name="department"
+                class="result materialr"
+              />
+              الزيوت
+            </label>
+            <div class="line"></div>
+            <!-- <a href="#" class="result">الملابس</a> -->
+            <label>
+              <input
+                type="radio"
+                value="الملابس "
+                name="department"
+                class="result materialr"
+              />
+              الملابس
+            </label>
+            <div class="line"></div>
+          </div>
+
+          <div class="sec--5 hidden">
+            <label>
+              <input
+                type="radio"
+                value="درجة اولى"
+                name="department"
+                class="result grade"
+              />
+              درجة اولى
+            </label>
+
+            <!-- <a href="#">الاجهزة الاكترونية</a> -->
+            <div class="line"></div>
+
+            <label>
+              <input
+                type="radio"
+                value="درجة ثانية"
+                name="department"
+                class="result grade"
+              />
+              درجة ثانية
+            </label>
+
+            <div class="line"></div>
+
+            <label>
+              <input
+                type="radio"
+                value="درجة ثالثة"
+                name="department"
+                class="result grade"
+              />
+              درجة ثالثة
+            </label>
+
+            <div class="line"></div>
+          </div>
+
+          <div class="sec--6 hidden">
+            <div class="currency">
+              <h1>Omani Rial</h1>
+              <div class="containerr">
+                <input type="number" class="price" placeholder="السعر" />
+              </div>
+            </div>
+          </div>
+
+          <div class="sec--7 hidden">
+            <label class="choice">
+              <input
+                type="radio"
+                value="كل المواقع"
+                name="department"
+                class="result"
+              />
+              كل المواقع
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value=" الخوض"
+                name="department"
+                class="result"
+              />
+              الخوض
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الخوير"
+                name="department"
+                class="result"
+              />
+              الخوير
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الموالح"
+                name="department"
+                class="result"
+              />
+              الموالح
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الموج"
+                name="department"
+                class="result"
+              />
+              الموج
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="البستان"
+                name="department"
+                class="result"
+              />
+              البستان
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الحيل"
+                name="department"
+                class="result"
+              />
+              الحيل
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الوطية"
+                name="department"
+                class="result"
+              />
+              الوطية
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="العامرات"
+                name="department"
+                class="result"
+              />
+              العامرات
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الانصب"
+                name="department"
+                class="result"
+              />
+              الانصب
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="العذيبة"
+                name="department"
+                class="result"
+              />
+              العذيبة
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="بوشر"
+                name="department"
+                class="result"
+              />
+              بوشر
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="دارسيت"
+                name="department"
+                class="result"
+              />
+              دارسيت
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="غلا"
+                name="department"
+                class="result"
+              />
+              غلا
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الغبرة"
+                name="department"
+                class="result"
+              />
+              الغبرة
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="حلبان"
+                name="department"
+                class="result"
+              />
+              حلبان
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="مدينة السلطان قابوس"
+                name="department"
+                class="result"
+              />
+              مدينة السلطان قابوس
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="المنومه"
+                name="department"
+                class="result"
+              />
+              المنومه
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="المسفاه"
+                name="department"
+                class="result"
+              />
+              المسفاه
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="مرتفعات مسقط"
+                name="department"
+                class="result"
+              />
+              مرتفعات مسقط
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="مطرح"
+                name="department"
+                class="result"
+              />
+              مطرح
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="قنتب"
+                name="department"
+                class="result"
+              />
+              قنتب
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="قريات"
+                name="department"
+                class="result"
+              />
+              قريات
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="القرم"
+                name="department"
+                class="result"
+              />
+              القرم
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الرسيل"
+                name="department"
+                class="result"
+              />
+              الرسيل
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="روي"
+                name="department"
+                class="result"
+              />
+              روي
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="السيب"
+                name="department"
+                class="result"
+              />
+              السيب
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="سداب"
+                name="department"
+                class="result"
+              />
+              سداب
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="الوادي الكبير"
+                name="department"
+                class="result"
+              />
+              الوادي الكبير
+            </label>
+
+            <div class="line"></div>
+
+            <label class="choice">
+              <input
+                type="radio"
+                value="اخرى"
+                name="department"
+                class="result"
+              />
+              اخرى
+            </label>
+
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="apply">
+        <div class="filter-btn">فلترة</div>
+      </a>
+    </div>
+
+    <script src="/js/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>تاريخ شحن الرصيد</title>
+  </head>
+  <body>
+    <div class="logo d-flex justify-content-around">
+      <div class="back-btn">
+        <a href="../settings/payment.html">
+          <img src="/img/icons/back.svg" style="width: 40px" alt="back-btn"
+        /></a>
+      </div>
+
+      <a href="..//">
+        <img
+          src="/img/invare_logo-removebg-preview.png"
+          alt="logo"
+          style="width: 4rem"
+        />
+      </a>
+      <div class="back-btn">
+        <a href="">
+          <img
+            class="sos-btn"
+            src="/img/iconsw/phone-500.svg"
+            alt="sos"
+            style="width: 30px"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="c-card">
+        <div class="amount">OMR 1925.00</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="history-show-btn">
+        <a href="#" class="recharge-btn pressed">
+          <div>تاريخ الشحن</div>
+        </a>
+
+        <a href="" class="order-btn">
+          <div>تاريخ الدفع</div>
+        </a>
+      </div>
+
+      <div class="order">
+        <div class="date">11/12/2022</div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847684765</p>
+            </div>
+
+            <h2 class="outcome">- OMR 500</h2>
+          </div>
+        </div>
+
+        <div class="date">20/11/2022</div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847394628</p>
+            </div>
+
+            <h2 class="outcome">- OMR 5400</h2>
+          </div>
+        </div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847692846</p>
+            </div>
+
+            <h2 class="outcome">- OMR 590</h2>
+          </div>
+        </div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847029465</p>
+            </div>
+
+            <h2 class="outcome">- OMR 5000</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="recharge">
+        <div class="date">11/12/2022</div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847684765</p>
+            </div>
+
+            <h2>+ OMR 500</h2>
+          </div>
+        </div>
+
+        <div class="date">20/11/2022</div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847394628</p>
+            </div>
+
+            <h2>+ OMR 5400</h2>
+          </div>
+        </div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847692846</p>
+            </div>
+
+            <h2>+ OMR 590</h2>
+          </div>
+        </div>
+
+        <div class="log-history">
+          <div class="log-window">
+            <div class="headline">
+              <h1>رقم العملية</h1>
+              <p>93847029465</p>
+            </div>
+
+            <h2>+ OMR 5000</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const order = document.querySelector(".order");
+      const recharge = document.querySelector(".recharge");
+
+      const orderBtn = document.querySelector(".order-btn");
+      const rechargeBtn = document.querySelector(".recharge-btn");
+
+      const movements = [500, 5400, 590, 5000];
+
+      // const good = `<h2 class="outcome"> ${movements}</h2>`;
+      // const bad = ` <h2 class="outcome">- ${movements}</h2> `;
+
+      orderBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        orderBtn.classList.add("pressed");
+        order.style.opacity = 100;
+
+        console.log("hello");
+        rechargeBtn.classList.remove("pressed");
+        recharge.style.opacity = 0;
+      });
+
+      rechargeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        rechargeBtn.classList.add("pressed");
+        recharge.style.opacity = 100;
+
+        orderBtn.classList.remove("pressed");
+        order.style.opacity = 0;
+      });
+    </script>
+  </body>
+</html>

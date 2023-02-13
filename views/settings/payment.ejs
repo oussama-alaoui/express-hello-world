@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>invare</title>
+  </head>
+  <body>
+    <div class="logo d-flex justify-content-around">
+      <div class="back-btn">
+        <a href="/account">
+          <img src="/img/icons/back.svg" style="width: 40px" alt="back-btn"
+        /></a>
+      </div>
+
+      <a href="/">
+        <img
+          src="/img/invare_logo-removebg-preview.png"
+          alt="logo"
+          style="width: 4rem"
+        />
+      </a>
+      <div class="back-btn">
+        <a href="/account">
+          <img
+            class="sos-btn"
+            src="/img/iconsw/phone-500.svg"
+            alt="sos"
+            style="width: 30px"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="c-card">
+        <div class="card-number">1234 1234 1234 1234</div>
+
+        <div class="card-info">
+          <div class="card-name"><%= user.username %></div>
+          <div class="amount">رصيدك: <%= user.sold %> ريال</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="table-1">
+        <a href="#" class="new-payment">شحن الرصيد</a>
+        <!-- opens a checkout modal -->
+        <div class="line"></div>
+        <a href="subscription">الاشتراكات</a>
+        <!-- not for use now -->
+        <div class="line"></div>
+        <a href="transfer">التحويل</a>
+        <div class="line"></div>
+        <a href="orderhistory">تاريخ الطلب</a>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="new-recharge-modal hidden">
+      <a href="#">
+        <img src="/img/icons/close.svg" class="closeb" alt="" />
+      </a>
+      <input type="text" class="visa" placeholder="رقم بطاقة فيزا" />
+      <div class="secret">
+        <input type="text" name="" id="" placeholder="CVC" />
+        <input type="text" name="" id="" placeholder="mm/yy" />
+      </div>
+      <input type="text" placeholder="اسم صاحب البطاقة" />
+
+      <div class="btn-align">
+        <div class="confirm-btn">تأكيد الدفع</div>
+      </div>
+    </div>
+
+    <script>
+      const rechargeModal = document.querySelector(".new-recharge-modal");
+      const rechargeBtn = document.querySelector(".new-payment");
+      const closeBtn = document.querySelector(".closeb");
+
+      rechargeBtn.addEventListener("click", () => {
+        rechargeModal.classList.toggle("hidden");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        rechargeModal.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

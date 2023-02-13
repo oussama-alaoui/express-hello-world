@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/admin/style.css" />
+    <title>سجل شحن الرصيد</title>
+  </head>
+</html>
+
+<body>
+  <div class="overlay hidden"></div>
+  <div class="sidebar-btn">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="sidebar hidden">
+    <div class="list">
+      <a href="dashboard.html">الرئيسية</a>
+      <div class="line"></div>
+      <a href="head.html">الادارة</a>
+      <div class="line"></div>
+      <a href="rechargelog.html">سجل الشحن</a>
+      <div class="line"></div>
+      <a href="orderlog.html">سجل الطلب</a>
+      <div class="line"></div>
+      <a href="#">سجل التقييمات</a>
+      <div class="line"></div>
+      <a href="#">الاعلانات</a>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div class="head">
+    <h1>سجل شحن الرصيد</h1>
+  </div>
+
+  <div class="container">
+    <div class="log-place">
+      <div class="log">
+        <p>
+          قام حساب عضوية رقم (28973) بعملية (02938) شحن رصيد بمقدار 1400 ريال
+        </p>
+
+        <div class="date">11/12/2022 10:38 AM</div>
+      </div>
+      <div class="log">
+        <p>
+          قام حساب عضوية رقم (192048) بعملية (02839) شحن رصيد بمقدار 100 ريال
+        </p>
+
+        <div class="date">11/12/2022 10:38 AM</div>
+      </div>
+      <div class="log">
+        <p>
+          قام حساب عضوية رقم (784783) بعملية (84632) شحن رصيد بمقدار 1800 ريال
+        </p>
+
+        <div class="date">11/12/2022 10:38 AM</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sidebarBtn = document.querySelector(".sidebar-btn");
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.querySelector(".overlay");
+
+    sidebarBtn.addEventListener("click", function () {
+      sidebar.classList.toggle("hidden");
+      overlay.classList.remove("hidden");
+    });
+
+    overlay.addEventListener("click", function () {
+      sidebar.classList.add("hidden");
+      overlay.classList.add("hidden");
+    });
+
+    window.addEventListener("scroll", function () {
+      sidebar.classList.add("hidden");
+      overlay.classList.add("hidden");
+      console.log("scrolled");
+    });
+  </script>
+</body>

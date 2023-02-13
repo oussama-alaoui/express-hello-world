@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>invare</title>
+  </head>
+  <body>
+    <div class="first-part">
+      <div class="logo d-flex justify-content-around">
+        <div class="back-btn">
+          <a href="../settings/transfer.html">
+            <img src="/img/icons/back.svg" style="width: 40px" alt="back-btn"
+          /></a>
+        </div>
+
+        <a href="..//">
+          <img
+            src="/img/invare_logo-removebg-preview.png"
+            alt="logo"
+            style="width: 4rem"
+          />
+        </a>
+        <div class="back-btn">
+          <a href="#">
+            <img
+              class="sos-btn"
+              src="/img/iconsw/phone-500.svg"
+              alt="sos"
+              style="width: 30px"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="transfer-display">
+        <div class="text">رقم الحساب</div>
+
+        <div id="acc-numberr"></div>
+
+        <div class="text">اسم الحساب</div>
+        <div class="acc-name">
+          <div class="name"></div>
+        </div>
+
+        <div class="text">المقدار</div>
+        <!-- <input type="number" id="y" placeholder="" /> -->
+
+        <div id="yy"></div>
+
+        <!-- <div class="btns"> -->
+        <div class="btn btn-primary">تاكيد التحويل</div>
+        <!-- <button class="btn btn-primary">الغاء</button> -->
+      </div>
+      <div class="modal-c hidden">
+        <div class="lord">
+          <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+          <lord-icon
+            src="https://cdn.lordicon.com/lbsajkny.json"
+            trigger="hover"
+            colors="primary:#39b385,secondary:#9be15d"
+            style="width: 250px; height: 250px"
+          >
+          </lord-icon>
+        </div>
+
+        <div class="message">
+          <p class="reply">تم تحويل المبلغ بنجاح</p>
+          <p class="reply">رقم التحويل (029384)</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    <script>
+      const btn = document.querySelector(".btn-primary");
+      const modal = document.querySelector(".modal-c");
+      btn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          location.replace("..//");
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
